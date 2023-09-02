@@ -14,7 +14,5 @@ int main() {
     }
     printf("dfsdfsd");
 
-    //sdfgmskdfgjfksdf
-
     return 0;
 }
