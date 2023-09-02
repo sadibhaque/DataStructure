@@ -12,6 +12,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("dffdf");
     }
+    printf("dfsdfsd");
 
     return 0;
 }
