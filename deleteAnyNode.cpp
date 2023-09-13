@@ -11,7 +11,7 @@ typedef struct node node;
 
 node *head = NULL;
 
-void deleteFirstNode(int key) {
+void deleteAnyNode(int key) {
     if (head == NULL) {
         cout << "Empty" << endl;
         return;
@@ -64,7 +64,7 @@ int main() {
     int key;
     cin>>key;
 
-    deleteFirstNode(key);
+    deleteAnyNode(key);
 
     printList();
 
