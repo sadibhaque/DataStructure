@@ -13,7 +13,8 @@ void enq(int x){
 void deq(){
     f++;
 }
-int main(){
+int main()
+{
     
     enq(2);
     enq(3);
