@@ -1,35 +1,59 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long int
 #define llf double
 
-void print2dVector(const vector<vector<int>>& v) {
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = 0; j <v[i].size(); j++){
-            cout<<v[i][j]<<" ";
+const ll N = 100;
+ll graph[N][N];
+
+void solve() {
+
+    ll vertices,edge;
+    cin>>vertices>>edge;
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            graph[i][j] = 0;
         }
-    cout << endl;
+    }
+    
+    for (int i = 0; i < edge; i++){
+        ll v1,v2;
+        cin>>v1>>v2;
+        graph[v1][v2] = 1;
+        graph[v2][v1] = 1;
+    }
+
+    for (int i = 0; i < vertices; i++){
+        for (int j = 0; j < vertices; j++){
+            cout<<graph[i][j]<<" ";
+        }
+        cout<<endl;
     }
 }
 
-ll maxV = 5;
+int main() {
 
-void addEdge(vector<vector<int>>& adj, ll x, ll y){
-    adj[x][y] = 1;
-    adj[y][x] = 1;
+    ll t;
+    t = 1;
+    
+    while (t--) {
+        solve();
+    }
+
+    return 0;
 }
 
-int main(){
-    vector<vector<int>> adj(maxV, vector<int>(maxV,0));
+//  INPUT HERE
 
-    addEdge(adj,0,1); 
-    addEdge(adj,0,2); 
-    addEdge(adj,0,3); 
-    addEdge(adj,2,1); 
-    addEdge(adj,2,4);
-    addEdge(adj,4,4);
-
-    print2dVector(adj);   
-}
+// 6 9
+// 1 3
+// 1 5
+// 3 5
+// 3 4
+// 3 6
+// 3 2
+// 2 6
+// 4 6
+// 5 6
