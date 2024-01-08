@@ -41,7 +41,7 @@ void deleteMax(vtr& v){
 		int l = cur * 2 + 1;
 		int r = cur * 2 + 2;
 		
-		if (l < sz && r < sz){
+		if (l < sz - 1 && r < sz - 1){
 			int temp;
 			if (v[l] > v[r]) temp = v[l];	
 			else temp = v[r];				
