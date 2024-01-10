@@ -17,7 +17,8 @@ public:
 class cmp{
 public:
 	bool operator()(Student a, Student b){
-		return a.marks < b.marks;
+		if( a.marks != b.marks ) return a.marks < b.marks;
+		else return a.roll > b.roll;
 	}
 };
 
